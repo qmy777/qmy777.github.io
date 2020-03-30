@@ -37,6 +37,8 @@ function writeHtmlCommentCountValueById(id) {
         try {
             if (result.length > 0) {
                 $("#" + id).html(result[0].comments);
+            } else {
+                $("#" + id).html(0);
             }
         } catch (e) {
             console.error(e);
@@ -240,7 +242,7 @@ function loadIssueData() {
                 writeHtmlCommentCountValueById(id);
             }
         }
-        console.clear();
+        // console.clear();
         console.log("~~~~欢迎光临！记得有时间多来看看哦，https://removeif.github.io/ ~~~~")
     }
     ,
